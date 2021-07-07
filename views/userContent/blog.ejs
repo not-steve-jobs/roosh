@@ -1,0 +1,96 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>BLOG</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/newslist.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="css/images/favicon.svg"/>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.form-validator.js"></script>
+</head>
+<body>
+<%- include ('header') -%>
+
+<div class="content">
+    <div class="custom_container">
+        <h1 class="page_title">Business Advice for Food Entrepreneurs</h1>
+        <div class="page_description">Marketing, finance, and business tips for for cottage cooks, chefs, bakers, canners, jammers, and all food artisans.</div>
+        <div class="news_list">
+            <ul>
+
+                <%data.forEach((item)=>{%>
+                <li class="col-12 col-sm-6 col-lg-4">
+
+                        <div class="news_block combo_hover">
+                            <a href="/blog/<%-item.url%>" class="news_image combo_link">
+                                <img class="blogPhotos" src="./uploads/<%=item.uploadPhoto%>" >
+                            </a>
+                            <a  href="/blog/<%-item.url%>" class="news_title combo_link">
+                                <%=item.title%>
+                            </a>
+                            <div class="news_description">
+                                <%-item.desc%>
+                            </div>
+                            <a href="/blog/<%-item.url%>" class="read_all combo_link">Read more</a>
+                        </div>
+                </li>
+                <%})%>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div style="width: 400px; margin: 0 auto; font-size: 18px">
+<% if (pages > 0) { %>
+    <ul id="paginationUl" class="pagination text-center">
+        <% if (current == 1) { %>
+            <li class="disabled"><a>First</a></li>
+        <% } else { %>
+            <li><a href="/blog?page=1">First</a></li>
+        <% } %>
+        <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+        <% if (i !== 1) { %>
+            <li class="disabled"><a>...</a></li>
+        <% } %>
+        <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+            <% if (i == current) { %>
+                <li class="active"><a><%= i %></a></li>
+            <% } else { %>
+                <li><a href="/blog?page=<%= i %>"><%= i %></a></li>
+            <% } %>
+            <% if (i == Number(current) + 4 && i < pages) { %>
+                <li class="disabled"><a>...</a></li>
+            <% } %>
+        <% } %>
+        <% if (current == pages) { %>
+            <li class="disabled"><a>Last</a></li>
+        <% } else { %>
+            <li><a href="/blog?page=<%= pages %>">Last</a></li>
+        <% } %>
+    </ul>
+<% } %>
+</div>
+
+
+<%- include ('footer') -%>
+<script src="js/main.js"></script>
+</body>
+</html>

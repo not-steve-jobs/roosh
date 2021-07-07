@@ -1,0 +1,110 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="shortcut icon" href="css/images/favicon.svg"/>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/jquery.form-validator.js"></script>
+</head>
+<body>
+    <%- include ('header') -%>
+<div class="content">
+    <div class="page_head_block">
+        <img src="images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
+        <div class="title_block custom_container">
+            <h1 class="page_title">JOIN US</h1>
+        </div>
+    </div>
+    <div class="custom_container">
+        <form action="/community" method="post" class="contact_form row">
+            <div class="section_title col-12">JOIN US</div>
+            <div class="field_block col-12 col-sm-6">
+                <input type="text" placeholder="Name" name="name" data-validation="required"/>
+                <span class="error_hint">mandatory field</span>
+            </div>
+            <div class="field_block col-12 col-sm-6">
+                <input type="text" placeholder="Surname" name="surname" data-validation="required"/>
+                <span class="error_hint">mandatory field</span>
+            </div>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Address" name="address" data-validation="required"/>
+                <span class="error_hint">mandatory field</span>
+            </div>
+            <div class="field_block col-12">
+                <input type="text" name="email" placeholder="Email" data-validation="email"/>
+                <span class="error_hint">
+							<span class="standard_hint">mandatory field</span>
+							<span class="individual_hint">invalid e-mail</span>
+						</span>
+            </div>
+            <div class="field_block col-12">
+                <input type="text" name="phone" placeholder="Phone" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+                <span class="error_hint">
+							<span class="standard_hint">mandatory field</span>
+							<span class="individual_hint">invalid e-mail</span>
+						</span>
+            </div>
+            <div class="field_block col-12">
+                <select name="desc" data-validation="required"  title="Խոհարարության մակարդակ" class="selectpicker">
+                    <option value="Սկսնակ-Անփորձ տնային խոհարար">Սկսնակ-Անփորձ տնային խոհարար</option>
+                    <option value="փորձառու տնային խոհարար">փորձառու տնային խոհարար</option>
+                    <option value="Որակավորված խոհարար">Որակավորված խոհարար</option>
+                </select>
+                <span class="error_hint">mandatory field</span>
+            </div>
+            <span>Բիզնես էջեր</span>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Facebook" name="facebook"/>
+            </div>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Instagram" name="instagram"/>
+            </div>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Youtube" name="youtube"/>
+            </div>
+            <span>Ռեֆերալ կոդ</span>
+            <div class="field_block col-12">
+                <input type="text" placeholder="Referral" name="referral"/>
+            </div>
+            <div class="button_block col-12">
+                <button type="submit" class="validate_button">SEND</button>
+            </div>
+            <div class="about_contacts col-12">
+                <div class="block_title">lorem WHOLESALE INQUIRIES</div>
+                <div class="block_description">Make these smokes available to your customers who are looking for alternative smokes or reliable smoking cessation aid.</div>
+                <div class="notif_block">We have highly competative prices and offer daily specials to our wholesale and retail partners.</div>
+            </div>
+        </form>
+    </div>
+    <div class="contacts_section" style="background-image: url('images/desarrollo-web.png')">
+        <div class="custom_container">
+            <div class="contacts_list">
+                <h2 class="list_title">lorem USA</h2>
+                <div class="list_inner">
+                    27720 Avenue Scott
+                    <br/>Unit# 140
+                    <br/>Valencia, CA 91355
+                    <br/>
+                    <br/><a href="tel:8188597667" class="phone_link">818-859-7667</a>
+                    <br/>
+                    <br/><a href="mailto:sales@loremusa.com">sales@loremusa.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <%- include ('footer') -%>
+<script src="js/main.js"></script>
+</body>
+</html>

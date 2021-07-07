@@ -1,0 +1,37 @@
+
+.blogContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.blogPhotos {
+    width: 300px;
+}
+.userCont input{
+    display: block;
+    margin: 20px;
+}
+.userCont textarea{
+    margin-left: 20px;
+}
+.generateUrlContent{
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.generateUrlContent p{
+    background: antiquewhite;
+}
+.generateUrlContent img{
+    max-width: 500px;
+}
+
+.editBlogContainer{
+    display: flex;
+}
+#language{
+    all: initial;
+}
+#language * {
+    all: unset
+}

@@ -1,0 +1,15 @@
+<%- include ('admin_profile_header') -%>
+
+<h1>Add blog</h1>
+
+<form action="/admin_profile/addblog" enctype="multipart/form-data" method="post" class="userCont">
+    <input type="text" name="url" placeholder="enter URL" required>
+    <input type="text" name="title" placeholder="enter TITLE" required>
+    <input type="text" name="desc1" placeholder="enter desc1" required>
+    <input type="text" name="desc2" placeholder="enter desc2" required>
+    <textarea name="desc" cols="30" rows="10" placeholder="enter DESCTIPTYON" required></textarea>
+    <input type="file" name="uploadPhoto" accept='image/*' id="select" required>
+    <button>Save</button>
+</form>
+
+<%- include ('admin_profile_footer') -%>
