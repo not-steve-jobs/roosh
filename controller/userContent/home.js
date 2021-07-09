@@ -1,20 +1,23 @@
-const language = require('../../config/language')
+const UserContent = require('../../models/blog')
 const homePage = async (req, res, next) => {
-    try {
-        if(req?.session?.language === 'arm'  ){
-           return  res.render('userContent/home', {
-               staticData:language[1]
-           })
-        }
-        return res.render('userContent/home', {
-            staticData:language[0]
+    try{
+         UserContent.find({})
+            .sort({'createdDate' : -1 })
+            .limit(10)
+            .then((data,err) => {
+                if(err) {
+                    throw new Error('UserContent Error get')
+                }
+                res.render('userContent/home', {
+                    staticData:req.staticData,
+                    lang: req.session.language || 'eng',
+                    data,
+            });
         })
-
     }catch (e) {
         next(e)
     }
 }
-
 module.exports = {
     homePage
 }

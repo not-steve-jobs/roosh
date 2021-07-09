@@ -45,7 +45,7 @@
                         platform <span class="bold">purpose-built to help independent</span> food artisans start, build,
                         and grow their businesses.
                     </div>
-                    <a href="/community" class="buy_now_btn">Join us</a>
+                    <a href="/<%=lang%>/community" class="buy_now_btn">Join us</a>
                 </div>
             </div>
         </div>
@@ -53,29 +53,20 @@
     <div class="custom_container">
         <div class="block_title">
             <h1 class="page_title">BLOG</h1>
-            <a href="blog">VIEW ALL</a>
+            <a href="/<%=lang%>/blog">VIEW ALL</a>
         </div>
         <div class="small_banners">
+            <%data.forEach((item)=>{%>
+
             <div class="banner_block animation_block left_animation">
                 <div class="banner_inner"
-                     style="background-image: url('images/new-mobile-apps-blog.png')">
-                    <h2 class="banner_title">lorem HERBAL SMOKING MIXTURES</h2>
-                    <a href="news_inner.php" class="banner_btn">READ MORE</a>
+                     style="background-image: url('./uploads/<%=item.uploadPhoto%>')">
+                    <h2 class="banner_title"><%=item.title%></h2>
+                    <a href="/<%=lang%>/blog/<%-item.url%>" class="banner_btn">READ MORE</a>
                 </div>
             </div>
-            <div class="banner_block animation_block bottom_animation">
-                <div class="banner_inner" style="background-image: url('images/social-listening-2.jpg')">
-                    <h2 class="banner_title">lorem HERBAL SMOKING MIXTURES</h2>
-                    <a href="news_inner.php" class="banner_btn">READ MORE</a>
-                </div>
-            </div>
-            <div class="banner_block animation_block right_animation">
-                <div class="banner_inner"
-                     style="background-image: url('images/social-listening-tools-and-big-data.jpg')">
-                    <h2 class="banner_title">lorem HERBAL SMOKING MIXTURES</h2>
-                    <a href="news_inner.php" class="banner_btn">READ MORE</a>
-                </div>
-            </div>
+
+            <%})%>
         </div>
     </div>
 

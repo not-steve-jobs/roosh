@@ -13,6 +13,8 @@ function deleteOrder(blog) {
         }
     });
 }
+
+
 function changeLanguage() {
     const language = document.getElementById('language').value
     const obj = {
@@ -23,7 +25,12 @@ function changeLanguage() {
         type: 'POST',
         data: obj,
         success: function () {
-                window.location.reload(1);
+            if(window.location.href.includes('arm') && language === 'eng') {
+                window.location.href = window.location.href.replace('arm','eng')
+            }
+            if(window.location.href.includes('eng') && language === 'arm') {
+                window.location.href = window.location.href.replace('eng','arm')
+            }
         },
         error: function (data) {
             console.log('User creation failed :' + data);

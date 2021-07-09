@@ -16,21 +16,27 @@ const { generateUrl} = require('../controller/userContent/generateUrl')
 const {fileStorageEngine} = require('../controller/adminContent/multer')
 const {aboutPage} = require('../controller/userContent/about')
 const {homeCook} = require('../controller/adminContent/homeCook')
-const { ThisBlog, deleteThisBlog} = require('../controller/adminContent/ThisBlog')
 const { changeLanguage } = require('../controller/userContent/language')
+const { ThisBlog, deleteThisBlog} = require('../controller/adminContent/ThisBlog')
+const language = require('../middleware/language')
+
 const upload = multer({storage: fileStorageEngine})
 
-router.get('/', homePage)
-router.get('/about', aboutPage)
-router.get('/blog', blog)
-router.get('/community', community)
+router.get('/', (req,res,next) => {
+    res.redirect('/eng')
+})
+router.get('/:language/about',language, aboutPage)
+router.get('/:language/blog',language, blog)
+router.get('/:language/community',language, community)
 router.get('/admin_profile',checkIsAuthenticated, admin_profile)
 router.get('/admin_profile/adminblog',checkIsAuthenticated, adminBlog)
 router.get('/admin',forwardAuthenticated, login)
 router.get('/admin_profile/addblog',checkIsAuthenticated, registerContent)
 router.get('/admin_profile/editblog/:id',checkIsAuthenticated, editPage)
 router.get('/admin_profile/homecook',checkIsAuthenticated, homeCook)
-router.get('/blog/:id', generateUrl)
+router.get('/:language/blog/:id',language, generateUrl)
+router.get('/:language',language, homePage)
+
 router.get('/admin_profile/thisBlog/:id', ThisBlog)
 
 router.post('/login',

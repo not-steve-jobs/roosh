@@ -1,18 +1,12 @@
-const language = require('../../config/language')
-
 const CookContent = require('../../models/cook')
+const { CookContentValidate } = require('../../validations/CookContentValidate')
 
 const community = async (req, res, next) =>{
     try {
-        if(req?.session?.language === 'arm'  ){
             return  res.render('userContent/community', {
-                staticData:language[1]
+                staticData:req.staticData,
+                lang: req.session.language || 'eng',
             })
-        }
-        return res.render('userContent/community', {
-            staticData:language[0]
-        })
-
     }catch (e) {
         next(e)
     }
@@ -20,28 +14,20 @@ const community = async (req, res, next) =>{
 
 const communityRegister = async (req,res,next) =>{
     try {
-        const { name, surname ,address, email, phone, desc, facebook, instagram, youtube, referral} = req.body;
+        const {error, value} = CookContentValidate(req.body);
+        if (error) {
+            console.error('ValidationError', error.message);
+            return res.redirect(`/${req.session.language || 'eng'}/community`);
+        }
         const cookContent = new CookContent({
-            name,
-            surname,
-            address,
-            email,
-            phone,
-            desc,
-            facebook,
-            instagram,
-            youtube,
-            referral
+            ...value
         })
         await cookContent.save();
-        if(req?.session?.language === 'arm'  ){
+        console.log(6666)
             return  res.render('userContent/home', {
-                staticData:language[1]
+                staticData:req.staticData,
+                lang: req.session.language || 'eng',
             })
-        }
-        return res.render('userContent/home', {
-            staticData:language[0]
-        })
     }catch (e) {
         next(e)
     }

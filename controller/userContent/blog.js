@@ -1,6 +1,4 @@
-const language = require('../../config/language')
 const UserContent = require('../../models/blog')
-
 const blog = async (req,res,next)=> {
     try{
         const perPage = 6
@@ -12,21 +10,13 @@ const blog = async (req,res,next)=> {
             .exec(function(err, data) {
                 UserContent.countDocuments().exec(function (err, count) {
                     if (err) return console.error(`${err}`);
-                    if(req?.session?.language === 'arm'  ) {
                         res.render('userContent/blog', {
-                            staticData:language[1],
+                            staticData:req.staticData,
+                            lang: req.session.language || 'eng',
                             data,
                             current: page,
                             pages: Math.ceil(count / perPage),
                         })
-                        return
-                    }
-                    return res.render('userContent/blog', {
-                        staticData:language[0],
-                        data,
-                        current: page,
-                        pages: Math.ceil(count / perPage),
-                    })
                 });
             })
     }catch (e) {
