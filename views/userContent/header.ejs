@@ -10,17 +10,17 @@
                 <div class="menu_block">
                     <div class="menu_inner">
                         <ul class="main_menu">
-                            <li><a href="/<%=lang%>/blog"><%=staticData.blog%></a></li>
-                            <li><a href="/<%=lang%>/community"><%=staticData.community%></a></li>
-                            <li><a href="/<%=lang%>/about"><%=staticData.about%></a></li>
+                            <li><a href="/<%=lang%>/blog"><%=staticData.nav_blog%></a></li>
+                            <li><a href="/<%=lang%>/community"><%=staticData.nav_community%></a></li>
+                            <li><a href="/<%=lang%>/about"><%=staticData.nav_about%></a></li>
 
                             <select value=<%=lang%> name="language" id="language" onclick="changeLanguage()">
-                                <%if(lang === 'eng'){%>
-                                <option value="arm">արմ</option>
-                                <option selected value="eng">eng</option>
+                                <%if(lang === 'en'){%>
+                                <option value="hy">hy</option>
+                                <option selected value="en">en</option>
                                 <%}else{%>
-                                  <option selected value="arm">արմ</option>
-                                  <option  value="eng">eng</option>
+                                  <option selected value="hy">hy</option>
+                                  <option  value="en">en</option>
                                 <%}%>
                             </select>
 

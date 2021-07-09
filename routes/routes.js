@@ -23,7 +23,7 @@ const language = require('../middleware/language')
 const upload = multer({storage: fileStorageEngine})
 
 router.get('/', (req,res,next) => {
-    res.redirect('/eng')
+    res.redirect('/en')
 })
 router.get('/:language/about',language, aboutPage)
 router.get('/:language/blog',language, blog)
