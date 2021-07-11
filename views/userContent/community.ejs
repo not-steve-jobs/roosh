@@ -6,52 +6,52 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>Contact</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-select.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/contacts.css">
-    <link rel="shortcut icon" href="css/images/favicon.svg"/>
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/jquery.form-validator.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-select.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/contacts.css">
+    <link rel="shortcut icon" href="/css/images/favicon.svg"/>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap-select.js"></script>
+    <script src="/js/jquery.form-validator.js"></script>
 </head>
 <body>
     <%- include ('header') -%>
 <div class="content">
     <div class="page_head_block">
-        <img src="images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
+        <img src="/images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
         <div class="title_block custom_container">
-            <h1 class="page_title">JOIN US</h1>
+            <h1 class="page_title"><%=staticData.home_join%></h1>
         </div>
     </div>
     <div class="custom_container">
-        <form action="/community" method="post" class="contact_form row">
-            <div class="section_title col-12">JOIN US</div>
+        <form action="/community" method="post" class="contact_form row" id="c_form">
+            <div class="section_title col-12"><%=staticData.home_join%></div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" placeholder="Name" name="name" data-validation="required"/>
-                <span class="error_hint">mandatory field</span>
+                <input type="text" placeholder="Name" name="name" id="name" data-validation="required"/>
+                <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
             <div class="field_block col-12 col-sm-6">
                 <input type="text" placeholder="Surname" name="surname" data-validation="required"/>
-                <span class="error_hint">mandatory field</span>
+                <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
             <div class="field_block col-12">
                 <input type="text" placeholder="Address" name="address" data-validation="required"/>
-                <span class="error_hint">mandatory field</span>
+                <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
             <div class="field_block col-12">
                 <input type="text" name="email" placeholder="Email" data-validation="email"/>
                 <span class="error_hint">
-							<span class="standard_hint">mandatory field</span>
+							<span class="standard_hint"><%=staticData.com_fail%></span>
 							<span class="individual_hint">invalid e-mail</span>
 						</span>
             </div>
             <div class="field_block col-12">
                 <input type="text" name="phone" placeholder="Phone" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
                 <span class="error_hint">
-							<span class="standard_hint">mandatory field</span>
+							<span class="standard_hint"><%=staticData.com_fail%></span>
 							<span class="individual_hint">invalid e-mail</span>
 						</span>
             </div>
@@ -61,9 +61,9 @@
                     <option value="փորձառու տնային խոհարար">փորձառու տնային խոհարար</option>
                     <option value="Որակավորված խոհարար">Որակավորված խոհարար</option>
                 </select>
-                <span class="error_hint">mandatory field</span>
+                <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
-            <span>Բիզնես էջեր</span>
+            <span>Բիզնես էջեր (ՈՉ Պարտադիր)</span>
             <div class="field_block col-12">
                 <input type="text" placeholder="Facebook" name="facebook"/>
             </div>
@@ -73,38 +73,54 @@
             <div class="field_block col-12">
                 <input type="text" placeholder="Youtube" name="youtube"/>
             </div>
-            <span>Ռեֆերալ կոդ</span>
+            <span>Ռեֆերալ կոդ (ՈՉ Պարտադիր)</span>
             <div class="field_block col-12">
                 <input type="text" placeholder="Referral" name="referral"/>
             </div>
             <div class="button_block col-12">
-                <button type="submit" class="validate_button">SEND</button>
+                <button type="submit" class="validate_button" id="sendCommunity">SEND</button>
             </div>
             <div class="about_contacts col-12">
-                <div class="block_title">lorem WHOLESALE INQUIRIES</div>
-                <div class="block_description">Make these smokes available to your customers who are looking for alternative smokes or reliable smoking cessation aid.</div>
-                <div class="notif_block">We have highly competative prices and offer daily specials to our wholesale and retail partners.</div>
+                <div class="block_title"><%=staticData.com_who%></div>
+                <div class="block_description"><%=staticData.com_smoke%></div>
+                <div class="notif_block"><%=staticData.com_part%></div>
             </div>
         </form>
     </div>
     <div class="contacts_section" style="background-image: url('images/desarrollo-web.png')">
         <div class="custom_container">
             <div class="contacts_list">
-                <h2 class="list_title">lorem USA</h2>
+                <h2 class="list_title"><%=staticData.com_usa%></h2>
                 <div class="list_inner">
-                    27720 Avenue Scott
-                    <br/>Unit# 140
-                    <br/>Valencia, CA 91355
+                    <%=staticData.com_1%>
+                    <br/><%=staticData.com_2%>
+                    <br/><%=staticData.com_3%>
                     <br/>
-                    <br/><a href="tel:8188597667" class="phone_link">818-859-7667</a>
+                    <br/><a href="tel:8188597667" class="phone_link"><%=staticData.com_4%></a>
                     <br/>
-                    <br/><a href="mailto:sales@loremusa.com">sales@loremusa.com</a>
+                    <br/><a href="mailto:sales@loremusa.com"><%=staticData.com_5%></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
     <%- include ('footer') -%>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
+<!--<script>-->
+<!--    $(document).on("click","#sendCommunity",function() {-->
+<!--        let data = $("#c_form").serializeArray();-->
+<!--        $.ajax({-->
+<!--            url: `/community`,-->
+<!--            method:'POST',-->
+<!--            data:data,-->
+<!--            success: function (response) {-->
+<!--                location.replace('http://localhost:3000/');-->
+<!--            },-->
+<!--            error: function (data) {-->
+<!--                console.log('Product Delete failed :' + data);-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>

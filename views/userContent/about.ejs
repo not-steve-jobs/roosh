@@ -6,26 +6,25 @@
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>About us</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="css/images/favicon.svg"/>
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/css/images/favicon.svg"/>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
 </head>
 <body>
-<?php
 <%- include ('header') -%>
 <div class="content">
     <div class="about_page">
         <div class="custom_container">
-            <h1 class="page_title">About us</h1>
-            <div class="page_description">Marketing, finance, and business tips for for cottage cooks, chefs, bakers, canners, jammers, and all food artisans.</div>
+            <h1 class="page_title"><%=staticData.about_title%></h1>
+            <div class="page_description"><%=staticData.about_mark%></div>
         </div>
         <div class="custom_container">
             <div class="assortment_section">
-                <div class="image_block" style="background: url(images/banner-76-Points-Mobile-App-Development-All-Inclusive-Checklist-01.png) no-repeat"></div>
+                <div class="image_block" style="background: url(/images/banner-76-Points-Mobile-App-Development-All-Inclusive-Checklist-01.png) no-repeat"></div>
                 <div class="info_block">
                     <div class="info_inner">
                         <div class="page_title">Ինչպե՞ս պատվիրել</div>
@@ -96,6 +95,7 @@
                                 ամսաթիվը, վճարման տարբերակը (Կանխիկ, քարտով կամ Իդրամով) սեղմում եք առաքման գումար –ի
                                 վրա, սեղմում եք հաջորդ քայլ և հաստատում եք պատվերը:
                             </div>
+
                         </div>
                     </li>
                 </ul>
@@ -104,6 +104,6 @@
     </div>
 </div>
 <%- include ('footer') -%>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
