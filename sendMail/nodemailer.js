@@ -6,12 +6,12 @@ const transporter = nodemailer.createTransport(
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'raphael99@ethereal.email',
-            pass: 'ZvAwk2bNC3TsguMDUU'
+            user: 'roosh@internet.ru',
+            pass: 'mnbv1234--'
         }
     },
     {
-        from: 'mailer test <raphael99@ethereal.email>'
+        from: 'mailer test <roosh@internet.ru>'
     }
 );
 

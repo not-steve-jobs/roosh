@@ -1,6 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let yyyy = today.getFullYear();
+today = mm + '/' + dd + '/' + yyyy
+
 const blogSchema = new Schema ({
     url: {
         type: String,
@@ -42,6 +48,10 @@ const blogSchema = new Schema ({
     createdDate: {
         type: Date,
         default: Date.now()
+    },
+    addDate: {
+        type: String,
+        default: today
     }
 })
 

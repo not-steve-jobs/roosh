@@ -1,4 +1,3 @@
-const language = require('../../config/language')
 const aboutPage = async (req, res, next) => {
     try {
 
