@@ -1,0 +1,31 @@
+<%- include ('admin_profile_header') -%>
+<script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
+
+<h1>Edit page</h1>
+
+
+<div class="">
+    <form action="/admin_profile/editOnePage/<%=_id%>" enctype="multipart/form-data"  method="post" class="userCont">
+        <input type="text" name="url" placeholder="enter new URL" value="<%=url%>">
+        <input type="text" name="title" placeholder="enter new TITLE" value="<%=title%>">
+        <input type="text" name="desc1" placeholder="enter new des1" value="<%=desc1%>">
+        <input type="text" name="desc2" placeholder="enter new des2" value="<%=desc2%>">
+        <textarea id="editor" name="desc" cols="30" rows="10" placeholder="enter new DESCTIPTYON"><%=desc%></textarea>
+        <input type="file" name="uploadPhoto">
+        <img class="blogPhotos" src="../../uploads/<%=uploadPhoto%>">
+        <button>Edit</button>
+    </form>
+
+    <!--    <div id="editor" class="ckEditorBloc"></div>-->
+</div>
+
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
+<%- include ('admin_profile_footer') -%>

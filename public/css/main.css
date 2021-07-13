@@ -29,6 +29,14 @@
 .icon_foodie:before {
   content: "\e90c"; }
 
+.icon_eating:before {
+  content: "\e90a";
+  color: #1BC5D1; }
+
+.icon_cooking:before {
+  content: "\e90c";
+  color: #F47D6A; }
+
 .icon_rarrow:before {
   content: "\e90b"; }
 
@@ -104,6 +112,9 @@ button {
   cursor: pointer;
   display: block; }
 
+.content {
+  background: #171717; }
+
 img {
   max-height: none;
   border: none; }
@@ -133,10 +144,11 @@ img {
 .error_hint {
   display: block;
   position: relative;
-  color: #b94a48;
+  color: #ff0500;
   font-size: 120%;
   line-height: 15px;
   margin-bottom: -15px;
+  margin-top: 5px;
   padding: 0;
   opacity: 0;
   max-height: 15px;
@@ -168,7 +180,8 @@ img {
   margin: 0;
   font-family: "bold";
   font-size: 380%;
-  line-height: 1.24em; }
+  line-height: 1.24em;
+  color: #1BC5D1; }
   @media (max-width: 1199px) {
     .page_title {
       font-size: 320%; } }
@@ -195,7 +208,8 @@ img {
 .paging {
   padding-top: 10px;
   font-size: 180%;
-  line-height: 1.28em; }
+  line-height: 1.28em;
+  color: #ffffff; }
   .paging ul {
     display: flex;
     justify-content: center; }
@@ -219,6 +233,9 @@ img {
     pointer-events: none;
     cursor: default; }
 
+.filter-option-inner-inner {
+  color: #000000; }
+
 .field_block {
   position: relative;
   margin-bottom: 25px; }
@@ -238,9 +255,12 @@ img {
     font-size: 160%;
     line-height: 19px;
     padding: 18px;
+    border-radius: 5px;
     color: #000000;
-    border-radius: 0;
     -webkit-appearance: none; }
+    .field_block input::placeholder,
+    .field_block textarea::placeholder {
+      color: black; }
     .field_block input:focus,
     .field_block textarea:focus {
       border-color: #000000; }
@@ -258,7 +278,7 @@ img {
     line-height: 19px;
     box-shadow: none;
     outline: none !important;
-    border-radius: 0;
+    border-radius: 5px;
     border: 1px solid #9A9A9A !important;
     padding: 18px;
     background: #ffffff !important; }
@@ -276,7 +296,7 @@ img {
     max-width: 100% !important;
     width: 100%;
     margin: 3px 0 0;
-    border-radius: 0; }
+    border-radius: 5px; }
     .field_block .bootstrap-select .dropdown-menu li:not(:first-child) {
       border-top: 1px solid #9A9A9A; }
     .field_block .bootstrap-select .dropdown-menu > .inner {
@@ -285,10 +305,15 @@ img {
     margin: 0 0 3px; }
   .field_block .bootstrap-select div.dropdown-menu {
     border: 1px solid #9A9A9A; }
+  .field_block .bootstrap-select .dropdown-toggle::after {
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent; }
   .field_block .bootstrap-select .dropdown-item {
     padding: 12px 18px;
     font-weight: normal;
-    color: #9A9A9A;
+    color: #000000;
     background: transparent;
     font-size: 140%;
     line-height: 20px;
@@ -300,9 +325,9 @@ img {
     .field_block .bootstrap-select .dropdown-item:hover {
       color: #000000; }
   .field_block .bootstrap-select.has-error .btn {
-    border-color: #b94a48 !important; }
+    border-color: #ff0500 !important; }
   .field_block .bootstrap-select.has-error .dropdown-toggle::after {
-    color: #b94a48; }
+    color: #ff0500; }
   .field_block .bootstrap-select.show .btn {
     border-color: #000000 !important; }
 
@@ -310,7 +335,7 @@ form .button_block {
   padding-top: 10px; }
   form .button_block button {
     width: 100%;
-    background: #000000;
+    background: #1BC5D1;
     color: #ffffff;
     box-shadow: 0 2px 4px rgba(39, 26, 94, 0.2);
     font-size: 160%;
@@ -340,10 +365,9 @@ select {
   color: #999999; }
 .web .continue_btn:hover,
 .web form .button_block button:hover {
-  background: #666666; }
-.web .block_title a:hover,
-.web .breadcrumbs a:hover {
-  color: rgba(160, 160, 160, 0.7); }
+  background: #F47D6A; }
+.web .block_title a:hover {
+  color: #d1d1d1; }
 
 .touch .paging a:not(.current_page) {
   -o-transition: color 0.15s;
@@ -362,17 +386,15 @@ select {
   transition: background 0.15s; }
   .touch .continue_btn:active,
   .touch form .button_block button:active {
-    background: #666666; }
-.touch .block_title a,
-.touch .breadcrumbs a {
+    background: #F47D6A; }
+.touch .block_title a {
   -o-transition: color 0.15s;
   -ms-transition: color 0.15s;
   -moz-transition: color 0.15s;
   -webkit-transition: color 0.15s;
   transition: color 0.15s; }
-  .touch .block_title a:hover,
-  .touch .breadcrumbs a:hover {
-    color: rgba(160, 160, 160, 0.7); }
+  .touch .block_title a:hover {
+    color: #d1d1d1; }
 
 .paging ul, .header .main_menu {
   padding: 0;
@@ -399,11 +421,11 @@ select {
     top: 0;
     left: 0;
     width: 100%;
-    background: #ffffff;
+    background: #0e0e0e;
     box-shadow: 0 10px 14px 0 #00000014; }
   .header_bottom .custom_container {
     display: flex;
-    height: 85px;
+    height: 86px;
     align-items: center;
     justify-content: space-around;
     width: 100%; }
@@ -457,9 +479,14 @@ select {
       order: 3; }
     .header .main_menu a {
       display: inline-block;
-      color: inherit;
+      color: #d1d1d1;
       vertical-align: top;
-      position: relative; }
+      position: relative;
+      -o-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -webkit-transition: color 0.5s;
+      transition: color 0.5s; }
       .header .main_menu a.current_page:after {
         display: block;
         content: "";
@@ -479,22 +506,30 @@ select {
     .header .main_menu li.special_item {
       padding: 0 23px; } }
   @media (max-width: 1199px) {
-    .header_bottom .custom_container {
+    .header {
       height: 58px; }
-    .header .main_menu {
-      margin-right: -8px; }
-      .header .main_menu li:not(.special_item) {
-        padding: 0 8px; }
-      .header .main_menu li.special_item {
-        padding: 0 13px;
-        font-size: 140%;
-        line-height: 17px; }
-      .header .main_menu a.current_page:after {
-        bottom: -21px;
-        height: 4px; } }
+      .header .logo_block {
+        display: flex;
+        margin-top: 9px; }
+        .header .logo_block img {
+          width: 113px; }
+      .header_bottom .custom_container {
+        height: 58px;
+        align-items: unset; }
+      .header .main_menu {
+        margin-right: -8px; }
+        .header .main_menu li:not(.special_item) {
+          padding: 0 8px; }
+        .header .main_menu li.special_item {
+          padding: 0 13px;
+          font-size: 140%;
+          line-height: 17px; }
+        .header .main_menu a.current_page:after {
+          bottom: -21px;
+          height: 4px; } }
   @media (max-width: 767px) {
     .header {
-      height: 70px; }
+      height: 58px; }
       .header_bottom .custom_container {
         justify-content: end; }
       .header .menu_button {
@@ -502,7 +537,7 @@ select {
         padding: 11px 0;
         height: 24px;
         width: 24px;
-        color: inherit;
+        color: #ffffff !important;
         position: absolute;
         right: 15px;
         top: 16px;
@@ -541,7 +576,7 @@ select {
         bottom: 100%;
         width: 100%;
         z-index: 100;
-        background: #ffffff;
+        background: #000000;
         -o-transition: bottom 0.5s linear;
         -ms-transition: bottom 0.5s linear;
         -moz-transition: bottom 0.5s linear;
@@ -688,6 +723,24 @@ select {
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards; } }
+.web .header .main_menu a {
+  -o-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+  .web .header .main_menu a:hover {
+    color: #1BC5D1; }
+
+.touch .header .main_menu a {
+  -o-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+  .touch .header .main_menu a:hover {
+    color: #1BC5D1; }
+
 .footer {
   opacity: 1;
   margin: 0 auto; }
@@ -755,8 +808,7 @@ select {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
 
-.web .paging a:not(.current_page), .web .block_title a,
-.web .breadcrumbs a, .web .developer a {
+.web .paging a:not(.current_page), .web .block_title a, .web .developer a {
   -o-transition: color 0.3s;
   -ms-transition: color 0.3s;
   -moz-transition: color 0.3s;

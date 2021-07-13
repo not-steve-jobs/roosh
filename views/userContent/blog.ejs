@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/newslist.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@
         <div class="page_description"><%=staticData.blog_mark%></div>
         <div class="news_list">
             <ul>
-
+                <%if (data.length >0) { %>
                 <%data.forEach((item)=>{%>
                 <li class="col-12 col-sm-6 col-lg-4">
 
@@ -51,14 +52,13 @@
                         </div>
                 </li>
                 <%})%>
-
+                <% } %>
             </ul>
         </div>
     </div>
 </div>
 
-
-<div style="width: 400px; margin: 0 auto; font-size: 18px">
+<div >
 <% if (pages > 0) { %>
     <ul id="paginationUl" class="pagination text-center">
         <% if (current == 1) { %>

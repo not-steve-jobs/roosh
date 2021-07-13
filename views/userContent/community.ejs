@@ -56,10 +56,10 @@
 						</span>
             </div>
             <div class="field_block col-12">
-                <select name="desc" data-validation="required"  title="Խոհարարության մակարդակ" class="selectpicker">
-                    <option value="Սկսնակ-Անփորձ տնային խոհարար">Սկսնակ-Անփորձ տնային խոհարար</option>
-                    <option value="փորձառու տնային խոհարար">փորձառու տնային խոհարար</option>
-                    <option value="Որակավորված խոհարար">Որակավորված խոհարար</option>
+                <select name="desc" data-validation="required"  title="Cooking level" class="selectpicker">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Experienced">Experienced home cook</option>
+                    <option value="Certified cook">Certified cook</option>
                 </select>
                 <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
@@ -81,24 +81,25 @@
                 <button type="submit" class="validate_button" id="sendCommunity">SEND</button>
             </div>
             <div class="about_contacts col-12">
-                <div class="block_title"><%=staticData.com_who%></div>
-                <div class="block_description"><%=staticData.com_smoke%></div>
-                <div class="notif_block"><%=staticData.com_part%></div>
+                <div class="block_title">Become a home cook</div>
+                <div class="block_description">We’re building a multisided platform where home cooks can make money from their own kitchen. Fill out the form below to join and get benefits for early involvement.
+                </div>
+                <div class="notif_block">We'll send you an email with details, as soon as platform is ready.</div>
             </div>
         </form>
     </div>
     <div class="contacts_section" style="background-image: url('images/desarrollo-web.png')">
         <div class="custom_container">
             <div class="contacts_list">
-                <h2 class="list_title"><%=staticData.com_usa%></h2>
+                <h2 class="list_title">Contact us
+                </h2>
                 <div class="list_inner">
-                    <%=staticData.com_1%>
-                    <br/><%=staticData.com_2%>
-                    <br/><%=staticData.com_3%>
+                    <br/>Kajaznuni 1
+                    <br/>Yerevan, Armenia
                     <br/>
-                    <br/><a href="tel:8188597667" class="phone_link"><%=staticData.com_4%></a>
+                    <br/><a href="tel:8188597667" class="phone_link">+374 43 58-24-24</a>
                     <br/>
-                    <br/><a href="mailto:sales@loremusa.com"><%=staticData.com_5%></a>
+                    <br/><a href="mailto:sales@loremusa.com">info@rooshe.io</a>
                 </div>
             </div>
         </div>
@@ -106,21 +107,6 @@
 </div>
     <%- include ('footer') -%>
 <script src="/js/main.js"></script>
-<!--<script>-->
-<!--    $(document).on("click","#sendCommunity",function() {-->
-<!--        let data = $("#c_form").serializeArray();-->
-<!--        $.ajax({-->
-<!--            url: `/community`,-->
-<!--            method:'POST',-->
-<!--            data:data,-->
-<!--            success: function (response) {-->
-<!--                location.replace('http://localhost:3000/');-->
-<!--            },-->
-<!--            error: function (data) {-->
-<!--                console.log('Product Delete failed :' + data);-->
-<!--            }-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
+
 </body>
 </html>

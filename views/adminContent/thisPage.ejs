@@ -1,0 +1,16 @@
+<%- include ('admin_profile_header') -%>
+
+<%if(_id){%>
+<div class="itemBlog" id="<%=_id%>">
+    <h3><%=title%></h3>
+    <img src="../../uploads/<%=uploadPhoto%>" alt="" title=""/>
+    <p><%-desc%></p>
+    <p><%-desc1%></p>
+    <p><%-desc2%></p>
+
+    <a onclick="deleteOrder(this)" value="<%=_id%>" type="button" class="btn btn-danger">Delete</a>
+    <a name=<%=_id%> href="/admin_profile/editOnePage/<%=_id%>" type="button" class="btn btn-primary">Edit</a>
+</div>
+<%}%>
+
+<%- include ('admin_profile_footer') -%>

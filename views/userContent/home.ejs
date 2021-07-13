@@ -23,15 +23,15 @@
             <a href="#" class="category_block nicotine_free">
                 <img src="images/5fcf47cc0ff0404f51bc8630_3367077.jpg" alt="" title=""/>
                 <span class="info_block">
-					<span class="category_title icon_house"><span class="title_inner"><%=staticData.home_foodies%></span></span>
-					<span class="category_description"><%=staticData.home_food%></span>
+					<span class="category_title icon_house"><span class="title_inner">FOODIES</span></span>
+					<span class="category_description">Explore and order exciting dishes from talented local home cooks</span>
 				</span>
             </a>
             <a href="#" class="category_block movie_prod">
                 <img src="images/desarrollo-web.png" alt="" title=""/>
                 <span class="info_block">
-				    <span class="category_title icon_foodie"><span class="title_inner"><%=staticData.home_homecook%></span></span>
-				    <span class="category_description"><%=staticData.home_cook%></span>
+				    <span class="category_title icon_foodie"><span class="title_inner">HOMECOOKS</span></span>
+				    <span class="category_description">Earn money doing what you love</span>
 				</span>
             </a>
         </div>
@@ -52,24 +52,29 @@
             <h1 class="page_title"><%=staticData.nav_blog%></h1>
             <a href="/<%=lang%>/blog"><%=staticData.home_view%></a>
         </div>
-        <div class="small_banners">
-            <% var i = 0; %>
-            <% while (i < 3){ %>
+
+        <%if (data.length >0) { %>
+            <div class="small_banners">
+                <% var i = 0; %>
+                <% while (i < 3){ %>
                 <%data.forEach((item)=>{%>
-                        <div <%if (i===0) { %> class="banner_block animation_block left_animation"<% } %>
-                             <%if (i===1) { %> class="banner_block animation_block bottom_animation"<% } %>
-                             <%if (i===2) { %> class="banner_block animation_block right_animation"<% } %>
-                        >
-                            <div class="banner_inner"
-                                 style="background-image: url('./uploads/<%=item.uploadPhoto%>')">
-                                <h2 class="banner_title"><%=item.title%></h2>
-                                <a href="/<%=lang%>/blog/<%-item.url%>" class="banner_btn"><%=staticData.home_read%></a>
-                            </div>
-                        </div>
-                                <%i ++%>
+                <div <%if (i===0) { %> class="banner_block animation_block left_animation"<% } %>
+                <%if (i===1) { %> class="banner_block animation_block bottom_animation"<% } %>
+                <%if (i===2) { %> class="banner_block animation_block right_animation"<% } %>
+                >
+                    <div class="banner_inner"
+                         style="background-image: url('./uploads/<%=item.uploadPhoto%>')">
+                        <h2 class="banner_title"><%=item.title%></h2>
+                        <a href="/<%=lang%>/blog/<%-item.url%>" class="banner_btn"><%=staticData.home_read%></a>
+                    </div>
+                </div>
+                <%i ++%>
                 <%})%>
-            <%}%>
-        </div>
+                <%}%>
+            </div>
+        <% } %>
+
+
     </div>
 
 </div>

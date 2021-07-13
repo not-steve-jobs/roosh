@@ -48,6 +48,7 @@
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
         animation-delay: 0.8s; }
+
 .page_title {
   opacity: 0;
   animation-name: showWithOpacity;
@@ -69,6 +70,7 @@
   text-overflow: ellipsis;
   text-align: center;
   opacity: 0;
+  color: #ffffff;
   animation-name: showWithOpacity;
   animation-duration: 1.8s;
   animation-timing-function: ease-out;
@@ -79,17 +81,22 @@
 .news_block {
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  border-radius: 5px; }
   .news_block .news_image {
     display: block;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    border-radius: 5px; }
     .news_block .news_image:before {
       background: #ffffff;
       opacity: 0;
       position: relative; }
+    .news_block .news_image img {
+      border-radius: 5px; }
   .news_block .news_date {
     font-size: 130%;
     line-height: 16px;

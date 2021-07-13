@@ -17,7 +17,7 @@
   .block_title a {
     font-size: 180%;
     line-height: 1.33em;
-    color: #333333; }
+    color: #F47D6A; }
 
 .main_screen {
   margin-top: 20px; }
@@ -76,6 +76,7 @@
   margin: 55px 0;
   position: relative;
   opacity: 0;
+  border-radius: 5px;
   animation-name: showWithOpacity;
   animation-duration: 1.8s;
   animation-timing-function: ease-out;
@@ -153,7 +154,7 @@
     -webkit-transition-delay: 0s;
     transition-delay: 0s; }
   .herbal_mixtures .buy_now_btn {
-    background: #272727;
+    background: #1BC5D1;
     color: #ffffff; }
 
 .description_block {
@@ -268,7 +269,7 @@
         -webkit-transition: all 0.5s linear;
         transition: all 0.5s linear; }
     .category_block .category_title:before {
-      font-size: 4rem;
+      font-size: 5rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -368,7 +369,7 @@
 .small_banners,
 .large_banners {
   display: flex;
-  margin: 0 -15px; }
+  margin: 0 -10px; }
   .small_banners .banner_block,
   .large_banners .banner_block {
     height: 350px;
@@ -385,7 +386,8 @@
     justify-content: flex-end;
     position: relative;
     padding: 40px 65px;
-    color: #ffffff; }
+    color: #ffffff;
+    border-radius: 5px; }
     .small_banners .banner_inner:before,
     .large_banners .banner_inner:before {
       content: ""; }
@@ -430,12 +432,11 @@
     text-align: center;
     padding: 15px;
     min-width: 163px;
-    background: #ffffff;
-    color: inherit;
+    background: #1BC5D1;
+    color: #ffffff;
     margin-top: 25px;
     font-size: 130%;
-    line-height: 16px;
-    color: #333333; }
+    line-height: 16px; }
     .small_banners .banner_btn:hover,
     .large_banners .banner_btn:hover {
       background: rgba(255, 255, 255, 0.7);
@@ -627,7 +628,8 @@
 
   .herbal_mixtures {
     background-size: 0;
-    display: block; }
+    display: block;
+    margin-bottom: 0; }
     .herbal_mixtures:before {
       width: 100%;
       display: block;
@@ -733,23 +735,29 @@
 @media (max-width: 399px) {
   .footer .subscribe_form {
     width: 100%; } }
+.web .small_banners .banner_btn:hover, .web .large_banners .banner_btn:hover,
 .web .herbal_mixtures .buy_now_btn:hover {
-  background: #666666; }
+  background: #F47D6A;
+  color: #ffffff; }
 
+.touch .small_banners .banner_btn, .touch .large_banners .banner_btn,
 .touch .herbal_mixtures .buy_now_btn {
   -o-transition: background 0.15s;
   -ms-transition: background 0.15s;
   -moz-transition: background 0.15s;
   -webkit-transition: background 0.15s;
   transition: background 0.15s; }
+  .touch .small_banners .banner_btn:active, .touch .large_banners .banner_btn:active,
   .touch .herbal_mixtures .buy_now_btn:active {
-    background: #666666; }
+    color: #ffffff;
+    background: #F47D6A; }
 
 @keyframes showWithOpacity {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+.web .small_banners .banner_btn, .web .large_banners .banner_btn,
 .web .herbal_mixtures .buy_now_btn {
   -o-transition: background-color 0.3s;
   -ms-transition: background-color 0.3s;
