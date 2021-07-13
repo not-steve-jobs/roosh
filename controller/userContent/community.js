@@ -22,15 +22,14 @@ const communityRegister = async (req,res,next) =>{
         }
         const message = {
             to: req.body.email,
-            subject: 'maladec',
-            text: '!!!!!!!!!!!!!!!!!!!!!!'
+            subject: 'ROOSH GROUP',
+            text: 'congratulations!!! \nYou have successfully registered\n'
         }
         mailer.mailer(message)
         const cookContent = new CookContent({
             ...value
         })
         await cookContent.save();
-        console.log(6666)
             return  res.redirect('/')
     }catch (e) {
         next(e)

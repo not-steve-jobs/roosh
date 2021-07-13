@@ -48,10 +48,6 @@ mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology:
 app.use('/', apiRoutes)
 
 
-process.on('uncaughtException', function (err) {
-    console.error(`Oops Unhandled Exception !!!!! = ${err.stack}`);
-})
-
 
 app.listen(PORT, () => {
     console.log('Server started...')
