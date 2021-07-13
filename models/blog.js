@@ -24,7 +24,7 @@ const blogSchema = new Schema ({
     desc: {
         type: String,
         minLength: 2,
-        maxLength: 256,
+        maxLength: 5000,
         required: true,
     },
     desc1: {
