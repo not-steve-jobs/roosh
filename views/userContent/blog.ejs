@@ -57,7 +57,7 @@
 <% if (pages > 0) { %>
     <ul id="paginationUl" class="pagination text-center">
         <% if (current == 1) { %>
-            <li class="disabled"><a>First</a></li>
+            <li class="disabled"><a></a></li>
         <% } else { %>
             <li><a href="/<%=lang%>/blog?page=1">First</a></li>
         <% } %>
@@ -76,7 +76,7 @@
             <% } %>
         <% } %>
         <% if (current == pages) { %>
-            <li class="disabled"><a>Last</a></li>
+            <li class="disabled"><a></a></li>
         <% } else { %>
             <li><a href="/<%=lang%>/blog?page=<%= pages %>">Last</a></li>
         <% } %>

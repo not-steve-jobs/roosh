@@ -1,6 +1,9 @@
 const UserContent = require('../../models/blog')
+const menuLink = require('../../models/addMenu')
+
 const homePage = async (req, res, next) => {
     try{
+        const menuData = await menuLink.find({})
          UserContent.find({})
             .sort({'createdDate' : -1 })
             .limit(10)
@@ -12,6 +15,7 @@ const homePage = async (req, res, next) => {
                     staticData:req.staticData,
                     lang: req.session.language || 'eng',
                     data,
+                    menuData
             });
         })
     }catch (e) {

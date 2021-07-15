@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no"/>
-    <title>Stream meal</title>
+    <title>Rooshe</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
@@ -56,7 +56,7 @@
         <%if (data.length >0) { %>
             <div class="small_banners">
                 <% var i = 0; %>
-                <% while (i < 3){ %>
+                <% while (i < data.length && i < 3){ %>
                 <%data.forEach((item)=>{%>
                 <div <%if (i===0) { %> class="banner_block animation_block left_animation"<% } %>
                 <%if (i===1) { %> class="banner_block animation_block bottom_animation"<% } %>
