@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport(
         }
     },
     {
-        from: 'mailer test <roosh@internet.ru>'
+        from: 'Rooshe.am <roosh@internet.ru>'
     }
 );
 
