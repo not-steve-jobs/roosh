@@ -11,7 +11,7 @@ const homePage = async (req, res, next) => {
                 }
                 res.render('userContent/home', {
                     staticData:req.staticData,
-                    lang: req.session.language || 'eng',
+                    lang: req.session.language || 'en',
                     data
             });
         })

@@ -5,7 +5,7 @@ const generateUrl = async (req,res)=>{
         const url = await blog.findOne({url: id}).lean();
         return res.render('userContent/generateUrl', {...url,
             staticData:req.staticData,
-            lang: req.session.language || 'eng',})
+            lang: req.session.language || 'en',})
 }
 
 

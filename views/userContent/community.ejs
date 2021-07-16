@@ -78,7 +78,9 @@
                 <input type="text" placeholder="Referral" name="referral"/>
             </div>
             <div class="button_block col-12">
-                <button type="submit" class="validate_button" id="sendCommunity">SEND</button>
+                <div id="err" class="err invisible"><h3 style="color: red">ERROR</h3></div>
+                <div id="sus" class="sus invisible"><h3 style="color: dodgerblue">successful</h3></div>
+                <button type="button"  class="validate_button" id="sendCommunity">SEND</button>
             </div>
             <div class="about_contacts col-12">
                 <div class="block_title">Become a home cook</div>
@@ -88,7 +90,7 @@
             </div>
         </form>
     </div>
-    <div class="contacts_section" style="background-image: url('images/desarrollo-web.png')">
+    <div class="contacts_section" style="background-image: url('/images/desarrollo-web.png')">
         <div class="custom_container">
             <div class="contacts_list">
                 <h2 class="list_title">Contact us
@@ -106,6 +108,27 @@
     </div>
 </div>
     <%- include ('footer') -%>
+    <script>
+
+        $(document).on( "click","#sendCommunity", function() {
+            let formData = $('#c_form').serializeArray();
+            $.ajax({
+                type: "POST",
+                url: '/community',
+                data: formData,
+                success: function(result){
+                    alert('You have successfully registered')
+                    // $("#sus").toggleClass('invisible visible');
+                    location.reload();
+                },
+                error: function(result){
+                    // $("#err").toggleClass('invisible visible');
+                    alert('Field fill error')
+                }
+            });
+            console.log(formData)
+        });
+    </script>
 <script src="/js/main.js"></script>
 
 </body>

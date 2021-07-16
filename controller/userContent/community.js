@@ -6,7 +6,7 @@ const community = async (req, res, next) =>{
     try {
             return  res.render('userContent/community', {
                 staticData:req.staticData,
-                lang: req.session.language || 'eng',
+                lang: req.session.language || 'en',
             })
     }catch (e) {
         next(e)
@@ -18,7 +18,7 @@ const communityRegister = async (req,res,next) =>{
         const {error, value} = CookContentValidate(req.body);
         if (error) {
             console.error('ValidationError', error.message);
-            return res.redirect(`/${req.session.language || 'eng'}/community`);
+            return res.status(404).json(error)
         }
         const message = {
             to: req.body.email,
@@ -39,7 +39,7 @@ const communityRegister = async (req,res,next) =>{
             ...value
         })
         await cookContent.save();
-            return  res.redirect('/')
+        return res.redirect(`/${req.session.language || 'en'}/community`);
     }catch (e) {
         next(e)
     }

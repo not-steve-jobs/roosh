@@ -23,7 +23,6 @@ const { changeLanguage } = require('../controller/userContent/language')
 const { ThisBlog, deleteThisBlog} = require('../controller/adminContent/ThisBlog')
 const { thisPage, deleteThisPage} = require('../controller/adminContent/thisPage')
 const language = require('../middleware/language')
-
 const upload = multer({storage: fileStorageEngine})
 
 router.get('/', (req,res,next) => {

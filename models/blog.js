@@ -29,21 +29,20 @@ const blogSchema = new Schema ({
     },
     desc1: {
         type: String,
-        minLength: 2,
+        minLength: 1,
         maxLength: 256,
         required: true,
     },
     desc2: {
         type: String,
-        minLength: 2,
+        minLength: 1,
         maxLength: 256,
         required: true,
     },
     uploadPhoto: {
         type: String,
         minLength: 2,
-        maxLength: 256,
-        required: true
+        maxLength: 256
     },
     createdDate: {
         type: Date,

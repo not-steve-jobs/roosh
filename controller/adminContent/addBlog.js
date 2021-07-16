@@ -19,7 +19,7 @@ const registerUserContent = async (req,res,next) =>{
             desc1,
             desc2,
             uploadPhoto:filename
-        })
+            })
         await userContent.save();
         return res.render('adminContent/admin_profile',{})
     }catch (e) {

@@ -1,6 +1,7 @@
 module.exports =
     [
         {
+            nav_home: 'Home',
             nav_blog: 'Blog',
             nav_community: 'Community',
             nav_about: 'About Us',
@@ -38,6 +39,7 @@ module.exports =
 
         },
         {
+            nav_home: 'Գլխավոր',
             nav_blog: 'Բլոգ',
             nav_community: 'Կապ',
             nav_about: 'Մեր մասին',

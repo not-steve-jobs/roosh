@@ -12,7 +12,7 @@ const blog = async (req,res,next)=> {
                     if (err) return console.error(`${err}`);
                         res.render('userContent/blog', {
                             staticData:req.staticData,
-                            lang: req.session.language || 'eng',
+                            lang: req.session.language || 'en',
                             data,
                             current: page,
                             pages: Math.ceil(count / perPage),

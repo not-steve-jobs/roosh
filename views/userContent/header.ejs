@@ -5,16 +5,17 @@
         <div class="header_bottom">
             <div class="custom_container">
                 <div class="logo_block">
-                    <a href="/"><img src="/css/images/logo.svg" alt="" title=""/></a>
+                    <a href="/<%=lang%>"><img src="/css/images/logo.svg" alt="" title=""/></a>
                 </div>
                 <div class="menu_block">
                     <div class="menu_inner">
                         <ul class="main_menu">
+                            <li><a href="/<%=lang%>"><%=staticData.nav_home%></a></li>
                             <li><a href="/<%=lang%>/blog"><%=staticData.nav_blog%></a></li>
                             <li><a href="/<%=lang%>/community"><%=staticData.nav_community%></a></li>
                             <li><a href="/<%=lang%>/about"><%=staticData.nav_about%></a></li>
 
-                            <select value=<%=lang%> name="language" id="language" onclick="changeLanguage()">
+                            <select value=<%=lang%> name="language" id="language" onclick="changeLanguage()" style="color: #005cbf">
                                 <%if(lang === 'en'){%>
                                 <option value="hy">hy</option>
                                 <option selected value="en">en</option>

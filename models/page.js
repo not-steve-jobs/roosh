@@ -29,13 +29,13 @@ const pageSchema = new Schema ({
     },
     desc1: {
         type: String,
-        minLength: 2,
+        minLength: 1,
         maxLength: 256,
         required: true,
     },
     desc2: {
         type: String,
-        minLength: 2,
+        minLength: 1,
         maxLength: 256,
         required: true,
     },
