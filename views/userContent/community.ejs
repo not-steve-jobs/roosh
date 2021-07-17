@@ -78,9 +78,7 @@
                 <input type="text" placeholder="Referral" name="referral"/>
             </div>
             <div class="button_block col-12">
-                <div id="err" class="err invisible"><h3 style="color: red">ERROR</h3></div>
-                <div id="sus" class="sus invisible"><h3 style="color: dodgerblue">successful</h3></div>
-                <button type="button"  class="validate_button" id="sendCommunity">SEND</button>
+                <button type="submit"  class="validate_button" id="sendCommunity">SEND</button>
             </div>
             <div class="about_contacts col-12">
                 <div class="block_title">Become a home cook</div>
@@ -122,12 +120,13 @@
                     location.reload();
                 },
                 error: function(result){
-                    // $("#err").toggleClass('invisible visible');
-                    alert('Field fill error')
+                    $("html, body").animate({
+                        scrollTop: ($(document).height()-1700)
+                    }, 1000);
                 }
             });
-            console.log(formData)
         });
+
     </script>
 <script src="/js/main.js"></script>
 

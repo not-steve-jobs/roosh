@@ -7,7 +7,6 @@ const transporter = nodemailer.createTransport(
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            type: 'XOAuth2',
             user: 'roosh@internet.ru',
             pass: process.env.EMAIL_PASSWORD
         }
