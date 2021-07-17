@@ -4,7 +4,7 @@ const homePage = async (req, res, next) => {
     try{
          UserContent.find({})
             .sort({'createdDate' : -1 })
-            .limit(10)
+            .limit(3)
             .then((data,err) => {
                 if(err) {
                     throw new Error('UserContent Error get')

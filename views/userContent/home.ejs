@@ -56,7 +56,6 @@
         <%if (data.length >0) { %>
             <div class="small_banners">
                 <% var i = 0; %>
-                <% while (i < data.length && i < 3){ %>
                 <%data.forEach((item)=>{%>
                 <div <%if (i===0) { %> class="banner_block animation_block left_animation"<% } %>
                 <%if (i===1) { %> class="banner_block animation_block bottom_animation"<% } %>
@@ -70,7 +69,6 @@
                 </div>
                 <%i ++%>
                 <%})%>
-                <%}%>
             </div>
         <% } %>
 
