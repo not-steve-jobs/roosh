@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no"/>
-    <title>Contact</title>
+    <title><%=staticData.com_title%></title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap-select.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -30,40 +30,39 @@
         <form action="/community" method="post" class="contact_form row" id="c_form">
             <div class="section_title col-12"><%=staticData.home_join%></div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" placeholder="Surname" name="surname" data-validation="required"/>
+                <input type="text" placeholder="<%=staticData.com_surName%>" name="surname" data-validation="required"/>
                 <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
             <div class="field_block col-12 col-sm-6">
-                <input type="text" placeholder="Name" name="name" id="name" data-validation="required"/>
+                <input type="text" placeholder="<%=staticData.com_name%>" name="name" id="name" data-validation="required"/>
                 <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" placeholder="Address" name="address" data-validation="required"/>
+                <input type="text" placeholder="<%=staticData.com_address%>" name="address" data-validation="required"/>
                 <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
             <div class="field_block col-12">
-                <input type="text" name="email" placeholder="Email" data-validation="email"/>
+                <input type="text" name="email" placeholder="<%=staticData.com_email%>" data-validation="email"/>
                 <span class="error_hint">
 							<span class="standard_hint"><%=staticData.com_fail%></span>
-							<span class="individual_hint">invalid e-mail</span>
+							<span class="individual_hint"><%=staticData.com_fail_email%></span>
 						</span>
             </div>
             <div class="field_block col-12">
-                <input type="text" name="phone" placeholder="Phone" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
+                <input type="text" name="phone" placeholder="<%=staticData.com_phone%>" oninput="this.value=this.value.replace(/[^0-9+]/g,'');" data-validation="required"/>
                 <span class="error_hint">
 							<span class="standard_hint"><%=staticData.com_fail%></span>
-							<span class="individual_hint">invalid e-mail</span>
+							<span class="individual_hint"><%=staticData.com_fail_email%></span>
 						</span>
             </div>
             <div class="field_block col-12">
                 <select name="desc" data-validation="required"  title="Cooking level" class="selectpicker">
-                    <option value="Beginner">Beginner</option>
-                    <option value="Experienced">Experienced home cook</option>
-                    <option value="Certified cook">Certified cook</option>
+                    <option value="Beginner"><%=staticData.com_val1%></option>
+                    <option value="Experienced"><%=staticData.com_val2%></option>
+                    <option value="Certified cook"><%=staticData.com_val3%></option>
                 </select>
                 <span class="error_hint"><%=staticData.com_fail%></span>
             </div>
-            <span>Բիզնես էջեր (ՈՉ Պարտադիր)</span>
             <div class="field_block col-12">
                 <input type="text" placeholder="Facebook" name="facebook"/>
             </div>
@@ -73,29 +72,26 @@
             <div class="field_block col-12">
                 <input type="text" placeholder="Youtube" name="youtube"/>
             </div>
-            <span>Ռեֆերալ կոդ (ՈՉ Պարտադիր)</span>
             <div class="field_block col-12">
-                <input type="text" placeholder="Referral" name="referral"/>
+                <input type="text" placeholder="Referral code" name="referral"/>
             </div>
             <div class="button_block col-12">
                 <button type="submit"  class="validate_button" id="sendCommunity">SEND</button>
             </div>
             <div class="about_contacts col-12">
-                <div class="block_title">Become a home cook</div>
-                <div class="block_description">We’re building a multisided platform where home cooks can make money from their own kitchen. Fill out the form below to join and get benefits for early involvement.
-                </div>
-                <div class="notif_block">We'll send you an email with details, as soon as platform is ready.</div>
+                <div class="block_title"><%=staticData.com_block_title%></div>
+                <div class="block_description"><%=staticData.com_block_description%></div>
+                <div class="notif_block"><%=staticData.com_notif_block%></div>
             </div>
         </form>
     </div>
     <div class="contacts_section" style="background-image: url('/images/desarrollo-web.png')">
         <div class="custom_container">
             <div class="contacts_list">
-                <h2 class="list_title">Contact us
-                </h2>
+                <h2 class="list_title"><%=staticData.com_list_title%></h2>
                 <div class="list_inner">
-                    <br/>Kajaznuni 1
-                    <br/>Yerevan, Armenia
+                    <br/><%=staticData.com_list_inner1%>
+                    <br/><%=staticData.com_list_inner2%>
                     <br/>
                     <br/><a href="tel:8188597667" class="phone_link">+374 43 58-24-24</a>
                     <br/>

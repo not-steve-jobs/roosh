@@ -6,6 +6,7 @@ const generateUrl = async (req,res)=>{
         return res.render('userContent/generateUrl', {...url,
             staticData:req.staticData,
             lang: req.session.language || 'en',})
+
 }
 
 

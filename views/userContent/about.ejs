@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no"/>
-    <title>About us</title>
+    <title><%=staticData.about_title%></title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/about.css">
@@ -19,7 +19,7 @@
 <div class="content">
     <div class="about_page">
         <div class="custom_container">
-            <h1 class="page_title">About US</h1>
+            <h1 class="page_title"><%=staticData.about_title%></h1>
             <div class="page_description"></div>
         </div>
         <div class="custom_container">
@@ -27,70 +27,65 @@
                 <div class="image_block" style="background: url(/images/banner-76-Points-Mobile-App-Development-All-Inclusive-Checklist-01.png) no-repeat"></div>
                 <div class="info_block">
                     <div class="info_inner">
-                        <div class="page_title">We connect people through food</div>
-                        <div class="info_description">
-                            Rooshe is a multisided platform that connects users to strictly vetted and talented home cooks. All through an innovative platform that allows users to purchase home-cooked meals while watching streaming of how the dish is prepared.
-                            We offer a unique mix of concepts, where we combine social media, video content and the marketplace all together creating an opportunity to increase trust and build relationships between all sides of the platform.
-                            Our platform gives an opportunity to order right at the moment of watching streams and videos with the help of in-video shopping. Our ML-based algorithm will match client’s needs, interests and lifestyle and find awesome food from the nearest location.
-
-                        </div>
+                        <div class="page_title"><%=staticData.about_page_title%></div>
+                        <div class="info_description"><%=staticData.about_info_description%></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="custom_container">
-            <div class="page_title">What we did</div>
+            <div class="page_title"><%=staticData.about_custom_page_title%></div>
             <div class="faq_block">
                 <ul class="faq_list">
                     <li>
-                        <a href="" class="drop_btn"><span>EPIC Spring 2021 Incubator Program</span></a>
+                        <a href="" class="drop_btn"><span><%=staticData.about_cdrop_btn%></span></a>
                         <div class="drop_block">
                             <div class="drop_inner">
-                                Streameal (now Rooshe) had a privilege to participate in Spring 2021 Incubator Program of the Entrepreneurship and Product Innovation Center (EPIC) of the American University of Armenia (AUA).
+                                <%=staticData.about_drop_inner%>
                                 <br />
-                                Out of 36 applicant startups with a diverse range of startup ideas, ranging from agriculture to artificial intelligence, 8 startups were chosen to participate in the program including us.
-                                <a href="/<%=lang%>/thisPage/epic">View details</a>
+                                <%=staticData.about_drop_inner2%>
+                                <a href="/<%=lang%>/thisPage/epic"><%=staticData.about_drop_inner3%></a>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="" class="drop_btn"><span>2021 M1TQ Incubation Program</span></a>
+                        <a href="" class="drop_btn"><span><%=staticData.about_mitq1%></span></a>
                         <div class="drop_block">
                             <div class="drop_inner">
-                                We passed a 12-week intensive idea-stage incubation program that prepares participants to shape their ventures, validate our business concepts, and build business models. During the program, we learned the lean startup methodology and have the opportunity to participate in workshops and benefit from advisory and mentorship sessions by seasoned entrepreneurs, AUA faculty and alumni. We worked with mentors not only from Armenia but from the U.S., Europe, Ukraine, and Southeast Asia.
-                                <a href="/<%=lang%>/thisPage/m1tq">View details</a>
+                                <%=staticData.about_mitq2%>
+                                <a href="/<%=lang%>/thisPage/m1tq"><%=staticData.about_drop_inner3%></a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="page_title">Our Values</div>
+            <div class="page_title"><%=staticData.about_val%></div>
             <div class="our_block col-xl-9">
                 <ul class="row">
                     <li class="col-lg-4">
-                        <div class="our_title">Transparency</div>
-                        <div class="our_description">Promote homemade food with transparency of cooking process through video/streaming</div>
+                        <div class="our_title"><%=staticData.about_our_title3%></div>
+                        <div class="our_description"><%=staticData.about_our_description3%></div>
                     </li>
                     <li class="col-lg-4">
-                        <div class="our_title">Connecting people</div>
-                        <div class="our_description">connecting cooking enthusiasts and foodies by creating new concept</div>
+                        <div class="our_title"><%=staticData.about_our_title%></div>
+                        <div class="our_description"><%=staticData.about_our_description%></div>
                     </li>
                     <li class="col-lg-4">
-                        <div class="our_title">Empowering the potential</div>
-                        <div class="our_description">Unlock the real potential of everyone who will be able to earn an income utilizing available resources from the comfort of their home</div>
+                        <div class="our_title"><%=staticData.about_our_title2%></div>
+                        <div class="our_description"><%=staticData.about_our_description%></div>
                     </li>
                 </ul>
             </div>
-            <div class="page_title">Meet Our Team</div>
+            <div class="page_title"><%=staticData.about_team%></div>
             <div class="team_block col-xl-9">
                 <ul class="row">
                     <li class="col-lg-4 col-sm-6">
                         <div class="team_inner">
                             <img src="/images/Arshak.jpg" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name">Arshak</div>
+                                <div class="team_name"><%=staticData.about_arshak_name%></div>
                                 <div class="team_description">
-                                    Seasoned full stack developer with over 12 years in the field։
+                                    <%=staticData.about_arshak_desc%>
                                     <br />
                                     Co-founder at SmartApaga LLC
                                 </div>
@@ -101,9 +96,9 @@
                         <div class="team_inner">
                             <img src="/images/Theresa.jpg" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name">Theresa</div>
+                                <div class="team_name"><%=staticData.about_theresa_name%></div>
                                 <div class="team_description">
-                                    Hospitality professional with over 7 years experience.
+                                    <%=staticData.about_theresa_desc%>
 
                                     <br />
                                     Co-founder at hosprof.com
@@ -115,9 +110,9 @@
                         <div class="team_inner">
                             <img src="/images/Suren.jpg" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name">Suren</div>
+                                <div class="team_name"><%=staticData.about_suren_name%></div>
                                 <div class="team_description">
-                                    6 years of business management experience in the agricultural industry
+                                    <%=staticData.about_suren_desc%>
 
                                     <br />
 
@@ -129,9 +124,9 @@
                         <div class="team_inner">
                             <img src="/images/Hayk.jpg" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name">Hayk</div>
+                                <div class="team_name"><%=staticData.about_hayk_name%></div>
                                 <div class="team_description">
-                                    Sales and Business Development Manager, with experience of more than 10 years
+                                    <%=staticData.about_hayk_desc%>
 
                                     <br />
 
@@ -143,9 +138,9 @@
                         <div class="team_inner">
                             <img src="/images/Iza-new.jpg" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name">Iza</div>
+                                <div class="team_name"><%=staticData.about_iza_name%></div>
                                 <div class="team_description">
-                                    Import and Logistics Manager with over 12 years experience
+                                    <%=staticData.about_iza_desc%>
 
                                     <br />
 
@@ -157,9 +152,9 @@
                         <div class="team_inner">
                             <img src="/images/Anahit.jpg" title="" alt="" />
                             <div class="info_team">
-                                <div class="team_name">Anahit</div>
+                                <div class="team_name"><%=staticData.about_anahit_name%></div>
                                 <div class="team_description">
-                                    UI/UX designer with over 7 years of experience.
+                                    <%=staticData.about_anahit_desc%>
                                     <br />
 
                                 </div>

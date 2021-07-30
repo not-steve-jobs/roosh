@@ -27,11 +27,11 @@
 
                             <select value=<%=lang%> name="language" id="language" onclick="changeLanguage()" >
                                 <%if(lang === 'en'){%>
-                                <option value="hy">hy</option>
-                                <option selected value="en">en</option>
+                                <option value="hy"><%=staticData.nav_hy%></option>
+                                <option selected value="en"><%=staticData.nav_en%></option>
                                 <%}else{%>
-                                  <option selected value="hy">hy</option>
-                                  <option  value="en">en</option>
+                                  <option selected value="hy"><%=staticData.nav_hy%></option>
+                                  <option  value="en"><%=staticData.nav_en%></option>
                                 <%}%>
                             </select>
 
